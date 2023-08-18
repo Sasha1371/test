@@ -15,6 +15,5 @@ stage ('Publish to ECR') {
         sh 'docker push public.ecr.aws/x3k9c4u8/ecr-demoimg:""$BUILD_ID""'
          }
       }
+ }
 }
-}
-            
