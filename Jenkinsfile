@@ -12,7 +12,7 @@ stage ('Publish to ECR') {
         sh 'docker login -u AWS -p $(aws ecr-public get-login-password --region us-east-1) public.ecr.aws/x3k9c4u8'
         sh 'docker build -t ecr-demoimg .'
         sh 'docker tag  ecr-demoimg:""$BUILD_ID""'
-        sh 'docker push public.ecr.aws/x3k9c4u8/ecr-demoimg:""$BUILD_ID""'
+        sh 'docker push public.ecr.aws/x3k9c4u8/ecr-demoimg:latest'
          }
       }
  }
